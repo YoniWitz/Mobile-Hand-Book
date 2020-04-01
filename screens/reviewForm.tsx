@@ -3,6 +3,7 @@ import { View, TextInput, Button, Text } from 'react-native';
 import { globalStyles } from '../styles/global';
 import { Formik } from 'formik';
 import * as yup from 'yup';
+import { IReview } from '../models/IReview';
 
 const reviewSchema = yup.object({
     title: yup.string().required().min(4),
@@ -12,15 +13,18 @@ const reviewSchema = yup.object({
     })
 })
 
-export default function ReviewForm({ handleFormSubmit }) {
+interface IProps {
+    handleFormSubmit: (review: IReview) => void
+}
+export const ReviewForm: React.FC<IProps> = ({ handleFormSubmit }) => {
     return (
         <View style={globalStyles.container}>
             <Formik
-                initialValues={{ title: '', body: '', rating: '' }}
+                initialValues={{ title: '', body: '', rating: '', key: '' }}
                 validationSchema={reviewSchema}
-                onSubmit={(values, options) => {
+                onSubmit={(values: IReview, options) => {
                     options.resetForm();
-                    handleFormSubmit(values);                  
+                    handleFormSubmit(values);
                 }}
             >
                 {({ handleChange, handleBlur, handleSubmit, values, errors, touched }) => (

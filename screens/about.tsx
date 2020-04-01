@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View, Text,  Image, Linking } from 'react-native';
 import { globalStyles } from '../styles/global';
 
-export default function About (){
+export const About: React.FC  = () => {
     return (
         <View style={globalStyles.container}>
             <Text style={styles.headerText}>
@@ -74,6 +74,8 @@ export default function About (){
     )
 }
 
+export default About;
+
 const styles = StyleSheet.create({
     image: {
         width: '100%',
@@ -89,9 +91,6 @@ const styles = StyleSheet.create({
     },
     linkText:{
         color:'blue'
-    },
-    boldText:{
-
     },
     boldText:{
 

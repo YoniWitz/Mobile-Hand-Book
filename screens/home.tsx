@@ -1,27 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, Text, Button, FlatList } from 'react-native';
 import { globalStyles } from '../styles/global';
-import Card from '../shared/card';
-import MyModal from '../shared/modal';
-import ReviewForm from '../screens/reviewForm';
+import { Card } from '../shared/card';
+import { MyModal } from '../shared/modal';
+import { ReviewForm } from './reviewForm';
+import { IReview } from '../models/IReview';
 
-export default Home = ({ navigation }) => {
+interface IProps{
+}
+export const Home: React.FC<IProps> = ({ navigation }) => {
     const [modalVisible, setModalVisible] = useState(false);
-    const [reviews, setReviews] = useState([
-        { title: 'Zelda', rating: 5, body: "lorem ipsum", key:'1'},
-        { title: 'Gotta', rating: 4, body: "lorem ipsum", key:'2'},
-        { title: 'Not', rating: 3, body: "lorem ipsum" , key:'3'}
+    const [reviews, setReviews] = useState<IReview[]>([
+        { title: 'Zelda', rating: '5', body: "lorem ipsum", key: '1' },
+        { title: 'Gotta', rating: '4', body: "lorem ipsum", key: '2' },
+        { title: 'Not', rating: '3', body: "lorem ipsum", key: '3' }
     ]);
 
-    useEffect(() =>
-    {
+    useEffect(() => {
         setModalVisible(false);
     }, [reviews])
 
-    const handleFormSubmit = (review) => {
-        review.key=reviews[reviews.length - 1].key + 1;
+    const handleFormSubmit = (review: IReview) => {
+        review.key = reviews[reviews.length - 1].key + 1;
         setReviews([...reviews, review]);
-        
+
     }
 
     return (

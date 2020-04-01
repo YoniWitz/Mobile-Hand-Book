@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
-import { Text, View, Modal, TouchableHighlight, StyleSheet, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import React from 'react';
+import { Text, View, Modal, TouchableHighlight, StyleSheet, TouchableWithoutFeedback, Keyboard, Alert } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 
-export default function MyModal({ modalVisible, setModalVisible, children, modalName }) {
-
+interface IProps{
+    modalName:string,
+    modalVisible: boolean,
+    setModalVisible: (bool: boolean) => void
+}
+export const MyModal: React.FC<IProps> = ({ modalVisible, setModalVisible, children, modalName }) => {
     return (
         <View>
 

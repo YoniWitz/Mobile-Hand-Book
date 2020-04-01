@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, View, Text, Button, Image } from 'react-native';
 import { globalStyles } from '../styles/global';
-import Card from '../shared/card';
+import { Card } from '../shared/card';
 
-export default ReviewDetails = ({ navigation }) => {
+export const ReviewDetails: React.FC = ({ navigation }) => {
     const images = [
         'error',
         require("../assets/icons/rating-1.png"),

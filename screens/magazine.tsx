@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { StyleSheet, Button, View, Text, ImageBackground, TouchableHighlight } from 'react-native';
+import { StyleSheet, Button, View, Text, ImageBackground, TouchableHighlight, GestureResponderEvent, LayoutChangeEvent } from 'react-native';
 
-export default Magazine = () => {
+export const Magazine = () => {
     let [imageIndex, setImageIndex] = useState(0);
-    let [imageWidth, setImageWidth] = useState(null);
+    let [imageWidth, setImageWidth] = useState<number>(0);
 
     const images = [{ caption: "1. Introduction", source: require('../assets/images/2.jpg') },
     { caption: "2. whatever1", source: require('../assets/images/3.png') },
@@ -11,7 +11,7 @@ export default Magazine = () => {
     { caption: "4. whatever4", source: require('../assets/images/5.jpg') },
     { caption: "5. whatever5", source: require('../assets/images/1.jpg') }]
 
-    let nextImage = (event) => {
+    let nextImage = (event: GestureResponderEvent) => {
         const X = event.nativeEvent.locationX;
         const touchCalc = (X < imageWidth / 2) ? -1 : 1;
         let newIndex = (imageIndex + touchCalc) % images.length;
@@ -21,11 +21,11 @@ export default Magazine = () => {
         setImageIndex(newIndex);
     }
 
-    let buttonHandler = () =>{
+    let buttonHandler = () => {
         console.log('handbook downloaded');
     }
 
-    let onNewLayout = (event) => {
+    let onNewLayout = (event : LayoutChangeEvent) => {
         setImageWidth(event.nativeEvent.layout.width);
     }
 
@@ -42,7 +42,7 @@ export default Magazine = () => {
                     <Text style={styles.imageCaption}>{images[imageIndex].caption}</Text>
                 </ImageBackground>
             </TouchableHighlight>
-            
+
             <Button onPress={buttonHandler} title='Download handbook' />
             <View style={styles.empty} />
 
