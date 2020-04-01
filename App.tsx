@@ -8,7 +8,7 @@ let getFonts = () => Font.loadAsync({
   'nunito-bold': require('./assets/fonts/Nunito-Bold.ttf')
 })
 
-export default function App() {
+const App: React.FC = () => {
   const [fontsLoaded, setFontsLoaded] = useState(false);
 
   if (fontsLoaded) {
@@ -24,3 +24,5 @@ export default function App() {
       />)
   }
 }
+
+export default App;

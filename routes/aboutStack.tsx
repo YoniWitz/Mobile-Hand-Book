@@ -1,13 +1,15 @@
 import React from 'react';
 import { createStackNavigator } from 'react-navigation-stack';
-import { createAppContainer } from 'react-navigation';
-import Header from '../shared/header'
-import About from '../screens/about'
+import { createAppContainer, NavigationScreenProp, NavigationRoute } from 'react-navigation';
+import { Header } from '../shared/header'
+import { About } from '../screens/about'
+interface Params {
 
+}
 const screens = {
     About: {
         screen: About,
-        navigationOptions: ({ navigation }) => {
+        navigationOptions: ({ navigation }: { navigation: NavigationScreenProp<NavigationRoute<Params>, Params> }) => {
             return {
                 headerTitle: () => <Header navigation={navigation} title="About" />
             }

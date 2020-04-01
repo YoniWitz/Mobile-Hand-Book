@@ -2,7 +2,11 @@ import React from 'react';
 import { StyleSheet, Text, View, Image, ImageBackground, Dimensions } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 
-export default function Header({ navigation, title }) {
+interface IProps{
+title: string,
+navigation: any
+}
+export const Header: React.FC<IProps> = ({ navigation, title }) => {
     const pressHandler = () => navigation.openDrawer()
 
     return (
@@ -10,7 +14,6 @@ export default function Header({ navigation, title }) {
             <MaterialIcons
                 name='menu'
                 size={28}
-                style={styles.icon}
                 onPress={pressHandler} />
             <View style={styles.title}>
                 <Image source={require('../assets/icons/heart_logo.png')} style={styles.image} />
@@ -22,10 +25,10 @@ export default function Header({ navigation, title }) {
 
 const styles = StyleSheet.create({
     header: {
-        width:Dimensions.get('screen').width,
+        width: Dimensions.get('screen').width,
         height: '100%',
         flexDirection: 'row',
-        marginLeft:-15,
+        marginLeft: -15,
     },
     headerText: {
         fontWeight: 'bold',

@@ -1,8 +1,8 @@
 import { createDrawerNavigator } from 'react-navigation-drawer';
 import { createAppContainer } from 'react-navigation';
-import AboutStack from './aboutStack';
-import HomeStack from './homeStack';
-import magazineStack from './magazineStack';
+import  AboutStack  from './aboutStack';
+import  HomeStack  from './homeStack';
+import  magazineStack  from './magazineStack';
 
 const AppDrawerNavigator = createDrawerNavigator({
     Magazine: {
@@ -14,7 +14,7 @@ const AppDrawerNavigator = createDrawerNavigator({
     About: {
         screen: AboutStack,
     },
-    
+
 })
 
 export default createAppContainer(AppDrawerNavigator); 
