@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Image, View, Text, ImageBackground, TouchableHighlight } from 'react-native';
+import { StyleSheet, Button, View, Text, ImageBackground, TouchableHighlight } from 'react-native';
 
 export default Magazine = () => {
     let [imageIndex, setImageIndex] = useState(0);
@@ -21,6 +21,10 @@ export default Magazine = () => {
         setImageIndex(newIndex);
     }
 
+    let buttonHandler = () =>{
+        console.log('handbook downloaded');
+    }
+
     let onNewLayout = (event) => {
         setImageWidth(event.nativeEvent.layout.width);
     }
@@ -38,7 +42,10 @@ export default Magazine = () => {
                     <Text style={styles.imageCaption}>{images[imageIndex].caption}</Text>
                 </ImageBackground>
             </TouchableHighlight>
+            
+            <Button onPress={buttonHandler} title='Download handbook' />
             <View style={styles.empty} />
+
         </View>
     )
 }

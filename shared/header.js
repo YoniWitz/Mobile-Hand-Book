@@ -6,14 +6,14 @@ export default function Header({ navigation, title }) {
     const pressHandler = () => navigation.openDrawer()
 
     return (
-        <ImageBackground style={styles.header} source={require('../assets/game_bg.png')}>
+        <ImageBackground style={styles.header} source={require('../assets/icons/game_bg.png')}>
             <MaterialIcons
                 name='menu'
                 size={28}
                 style={styles.icon}
                 onPress={pressHandler} />
             <View style={styles.title}>
-                <Image source={require('../assets/heart_logo.png')} style={styles.image} />
+                <Image source={require('../assets/icons/heart_logo.png')} style={styles.image} />
                 <Text style={styles.headerText}>{title}</Text>
             </View>
         </ImageBackground>
