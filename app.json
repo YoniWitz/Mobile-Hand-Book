@@ -3,7 +3,7 @@
     "name": "Review Natively",
     "slug": "ywreviewnatively",
     "privacy": "public",
-    description:"Allows user to view and add reviews",
+    "description":"Allows user to view and add reviews",
     "sdkVersion": "36.0.0",
     "platforms": [
       "ios",

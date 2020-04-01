@@ -6,11 +6,11 @@ export default function About (){
     return (
         <View style={globalStyles.container}>
             <Text style={styles.headerText}>
-                Review Natively
+                Mobile Hand BOok
             </Text>
 
             <Text>
-                Lets user view and add reviews. Written in ReactNative. 
+               Written in ReactNative. 
                 Includes modal, drawer navigation and form validation.
             </Text>
 
@@ -18,7 +18,7 @@ export default function About (){
                 {"\n"}You can use it [here]
             </Text>
             <View>
-                <Image source={require('../assets/review_natively.jpg')} style={styles.image} />
+                <Image source={require('../assets/screenshots/review_natively.jpg')} style={styles.image} />
             </View>
             <Text style={styles.headerText}>
                 {"\n"}Summary
@@ -58,7 +58,7 @@ export default function About (){
                 <Text style={styles.boldText}>
                     Jonathan Hirshowitz
                 </Text>
-                <Text>
+                <Text style={styles.slantedText}>
                     - Full-Stack Software Developer -       
                 </Text>
                 <Text style={styles.linkText} 
@@ -93,5 +93,12 @@ const styles = StyleSheet.create({
     boldText:{
 
     },
+    boldText:{
+
+        fontWeight: 'bold',
+    },
+    slantedText:{
+        fontStyle: 'italic'
+    }
 
 })
