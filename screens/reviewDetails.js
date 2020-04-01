@@ -6,11 +6,11 @@ import Card from '../shared/card';
 export default ReviewDetails = ({ navigation }) => {
     const images = [
         'error',
-        require("../assets/rating-1.png"),
-        require("../assets/rating-2.png"),
-        require("../assets/rating-3.png"),
-        require("../assets/rating-4.png"),
-        require("../assets/rating-5.png")
+        require("../assets/icons/rating-1.png"),
+        require("../assets/icons/rating-2.png"),
+        require("../assets/icons/rating-3.png"),
+        require("../assets/icons/rating-4.png"),
+        require("../assets/icons/rating-5.png")
     ]
 
     let image = images[navigation.getParam('rating')];
