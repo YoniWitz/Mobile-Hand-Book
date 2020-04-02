@@ -3,7 +3,10 @@ import { StyleSheet, View, Text, Button, Image } from 'react-native';
 import { globalStyles } from '../styles/global';
 import { Card } from '../shared/card';
 
-export const ReviewDetails: React.FC = ({ navigation }) => {
+interface IProps{
+    navigation: any
+}
+export const ReviewDetails: React.FC<IProps> = ({ navigation }) => {
     const images = [
         'error',
         require("../assets/icons/rating-1.png"),

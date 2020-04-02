@@ -5,8 +5,10 @@ import { Card } from '../shared/card';
 import { MyModal } from '../shared/modal';
 import { ReviewForm } from './reviewForm';
 import { IReview } from '../models/IReview';
+import { NavigationScreenProp, NavigationRoute } from 'react-navigation';
 
 interface IProps{
+    navigation: NavigationScreenProp<NavigationRoute<null>>
 }
 export const Home: React.FC<IProps> = ({ navigation }) => {
     const [modalVisible, setModalVisible] = useState(false);
@@ -23,7 +25,6 @@ export const Home: React.FC<IProps> = ({ navigation }) => {
     const handleFormSubmit = (review: IReview) => {
         review.key = reviews[reviews.length - 1].key + 1;
         setReviews([...reviews, review]);
-
     }
 
     return (
