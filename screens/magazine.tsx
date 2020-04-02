@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
-import { StyleSheet, Button, View, Text, ImageBackground, TouchableHighlight, GestureResponderEvent, LayoutChangeEvent } from 'react-native';
+import { StyleSheet, GestureResponderEvent, LayoutChangeEvent, View, TouchableHighlight, Text, ImageBackground, Button } from 'react-native';
+import { NavigationScreenProp, NavigationRoute } from 'react-navigation';
+interface IProps {
+    navigation: NavigationScreenProp<NavigationRoute<null>>
+}
 
-export const Magazine = () => {
+export const Magazine: React.FC<IProps> = ({ navigation }) => {
     let [imageIndex, setImageIndex] = useState(0);
     let [imageWidth, setImageWidth] = useState<number>(0);
 
@@ -25,7 +29,7 @@ export const Magazine = () => {
         console.log('handbook downloaded');
     }
 
-    let onNewLayout = (event : LayoutChangeEvent) => {
+    let onNewLayout = (event: LayoutChangeEvent) => {
         setImageWidth(event.nativeEvent.layout.width);
     }
 
@@ -45,7 +49,12 @@ export const Magazine = () => {
 
             <Button onPress={buttonHandler} title='Download handbook' />
             <View style={styles.empty} />
-
+            <View style={styles.container}>
+                <Button
+                    onPress={() => navigation.navigate('Pdf')}
+                    title='Open PDF'
+                />
+            </View>
         </View>
     )
 }
