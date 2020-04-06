@@ -51,7 +51,7 @@ export const Magazine: React.FC<IProps> = ({ navigation }) => {
             <View style={styles.empty} />
             <View style={styles.container}>
                 <Button
-                    onPress={() => navigation.navigate('Pdf')}
+                    onPress={() => {console.log('pdfviewer');navigation.navigate('Pdf')}}
                     title='Open PDF'
                 />
             </View>
