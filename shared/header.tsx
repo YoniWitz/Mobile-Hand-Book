@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, ImageBackground, Dimensions } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon  from 'react-native-vector-icons/FontAwesome';
 
 interface IProps {
     title: string,
@@ -11,8 +11,8 @@ export const Header: React.FC<IProps> = ({ navigation, title }) => {
 
     return (
         <ImageBackground style={styles.header} source={require('../assets/icons/game_bg.png')}>
-            <Icon
-                name='glass'
+            <Icon 
+                name='menu'
                 size={28}
                 onPress={pressHandler} />
             <View style={styles.title}>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View, Modal, TouchableHighlight, StyleSheet, TouchableWithoutFeedback, Keyboard, Alert } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import FontAwesome  from 'react-native-vector-icons/FontAwesome';
 
 interface IProps{
     modalName:string,
@@ -10,7 +10,6 @@ interface IProps{
 export const MyModal: React.FC<IProps> = ({ modalVisible, setModalVisible, children, modalName }) => {
     return (
         <View>
-
             <Modal
                 animationType="slide"
                 transparent={true}
@@ -29,8 +28,8 @@ export const MyModal: React.FC<IProps> = ({ modalVisible, setModalVisible, child
                                 }}
                             >
                                 <View style={{ flexDirection: 'row' }}>
-                                    <Icon
-                                        name='close'
+                                    <FontAwesome 
+                                        name='fontawesome-close'
                                         size={20}
                                     />
                                     <Text style={styles.textStyle}>Cancel</Text>
@@ -50,8 +49,8 @@ export const MyModal: React.FC<IProps> = ({ modalVisible, setModalVisible, child
                 }}
             >
                 <View style={{ flexDirection: 'row' }}>
-                    <Icon
-                        name='add'
+                    <FontAwesome 
+                        name='fonstawesome-add'
                         size={20}
                     />
                     <Text style={styles.textStyle}>Add {modalName}</Text>
