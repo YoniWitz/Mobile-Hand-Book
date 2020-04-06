@@ -10,8 +10,7 @@ interface Params {
 const screens = {
     Magazine: {
         screen: Magazine,
-        navigationOptions: ({ navigation }: { navigation: NavigationScreenProp<NavigationRoute<Params>, Params> }) => {
-            //navigationOptions: (navigation: any) => {
+        navigationOptions: ({ navigation }: { navigation: NavigationScreenProp<NavigationRoute<Params>, Params> }) => {            
             return {
                 headerTitle: () => <Header navigation={navigation} title="Magazine" />
             }
@@ -19,11 +18,8 @@ const screens = {
     },
     Pdf: {
         screen: PdfScreen,
-        navigationOptions: ({ navigation }: { navigation: NavigationScreenProp<NavigationRoute<Params>, Params> }) => {
-            //navigationOptions: (navigation: any) => {
-            return {
-                headerTitle: () => <Header navigation={navigation} title="Pdf" />
-            }
+        navigationOptions:{
+            title: "Employee Handbook",
         }
     }
 }

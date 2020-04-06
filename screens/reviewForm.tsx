@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, TextInput, Button, Text } from 'react-native';
-import { globalStyles } from '../styles/global';
 import { Formik } from 'formik';
 import * as yup from 'yup';
+import { globalStyles } from '../styles/global';
 import { IReview } from '../models/IReview';
 
 const reviewSchema = yup.object({

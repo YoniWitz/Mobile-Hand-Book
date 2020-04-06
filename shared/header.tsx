@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, ImageBackground, Dimensions } from 'react-native';
-import Icon  from 'react-native-vector-icons/FontAwesome';
+import Icon  from 'react-native-vector-icons/MaterialIcons';
 
 interface IProps {
     title: string,
