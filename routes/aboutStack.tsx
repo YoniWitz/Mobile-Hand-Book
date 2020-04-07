@@ -11,7 +11,7 @@ const screens = {
         screen: About,
         navigationOptions: ({ navigation }: { navigation: NavigationScreenProp<NavigationRoute<Params>, Params> }) => {          
             return {
-                headerTitle: () => <Header navigation={navigation} title="About" />
+                headerTitle: () => <Header navigation={navigation} title="About CCNY" />
             }
         }
     }

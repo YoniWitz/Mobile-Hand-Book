@@ -1,75 +1,59 @@
-import React from 'react';
-import { StyleSheet, View, Text, Image, Linking } from 'react-native';
+import React, {useState} from 'react';
+import { StyleSheet, View, Text, ScrollView } from 'react-native';
 import { globalStyles } from '../styles/global';
+import { MyModal } from '../shared/modal';
+import { Letter } from './letter';
 
 export const About: React.FC = () => {
+    const [modalVisible, setModalVisible] = useState(false);
     return (
         <View style={globalStyles.container}>
+            <MyModal modalVisible={modalVisible} setModalVisible={setModalVisible} modalName='Letter From The President &CEO'>
+                <Letter />
+            </MyModal>
+            <ScrollView style={{flex:1}}>
             <Text style={styles.headerText}>
-                Mobile Hand BOok
+                WELCOME
             </Text>
 
             <Text>
-                Written in ReactNative.
-                Includes modal, drawer navigation and form validation.
-            </Text>
+                {'    '}For those of you who are starting employment with The Child Center of NY (“us”, “we” or the
+                “Agency”), let us extend a warm and sincere welcome. We hope you will enjoy working here.
+                For those of you, who have been with us over the years, thank you for your hard work.
+                -not many other employee handbooks acknowledge current workers so I think this part stands out
+                a lot.
+            
+                {"\n"}{'    '}We prepared this Handbook to assist you in finding answers to many of the most frequently
+                asked questions regarding personnel policies, compensation, and benefits. Of course, feel free to
+                ask your supervisor or Human Resources any questions regarding your employment.{"\n"}
+            
+                {'    '}The contents of this Handbook are guidelines only, and supersede any prior Handbook. Neither
+                this Handbook nor any other Agency guidelines, policies, or practices creates an employment
+                contract, bargain, or agreement or confers any contractual rights whatsoever. Subject to any
+                limitations pursuant to any applicable collective bargaining agreement (“CBA”), the Agency has
+                the right, with or without notice, in an individual case or generally, to change and/or modify its
+                interpretation of any of its guidelines, policies, practices, working conditions, or benefits at any
+                time. Nothing in this Handbook should be construed as a promise of specific treatment in any
+                specific situation upon which any employee should rely. Additionally, many matters covered by
+                this Handbook, such as employee benefits, are also described in separate official documents
+                which may be accessible through our online handbook via hyperlinks. Such official documents
+                are always controlling over any statement made in this Handbook or by any supervisor or
+                manager.
+            
+                {"\n"}{'    '}Subject to any limitations pursuant to any applicable CBA, employment with the Agency is atwill, and either the employee or the Agency may terminate employment at any time, with or
+                without cause or reason. No representative of the Agency is authorized to provide any employee,
+                individually or on a collective basis, with an employment contract or special arrangement
+                concerning the terms or conditions of employment unless the contract or agreement is in writing
+                and signed by the Chief Executive Officer (“CEO”). This notice applies to all employees
+                regardless of date of hire.
 
-            <Text style={styles.linkText}>
-                {"\n"}You can use it [here]
-            </Text>
-            <View>
-                <Image source={require('../assets/screenshots/review_natively.jpg')} style={styles.image} />
-            </View>
-            <Text style={styles.headerText}>
-                {"\n"}Summary
-            </Text>
-            <Text>
-                3.3.20
-            </Text>
+                {"\n"}{'    '}Employees covered by a CBA should review the applicable CBA for additional information
+                related to the terms and conditions of their employment. Should the language in this handbook
+                contradict or in any way conflict with the terms of the CBA, the terms of the CBA will govern.
 
-            <Text>
-                {'    '}I began participating in a 'Software Development Mastermind' mentorship program towards the
-                end of 2019. The purpose of the program is to strengthen and expand my skills as a Full Stack
-                developer. The completed work is showcased on my GitHub and portfolio/personal website.
-
-                {"\n"}{'    '}This Review Natively mobile app is a side project I created while learning Ractive Native.
-                and deploy.
-
-                {"\n"}{'    '}My ultimate goal is to land a job that incorporates my skills and utilizes my abilities and outgoing
-                personality. So if you enjoyed reviewing my code as much as I did writing it, please find me on one of the
-                links provided below.{"\n"}
+                {"\n"}We look forward to working together and continuing to work together{"\n"}
             </Text>
-
-            <Text style={styles.headerText}>
-                Installation Instructions
-            </Text>
-
-            <Text>
-                1. Download Repository{"\n"}
-                2. Using command line, run 'npm start' from root directory{"\n"}
-                3. In browser, use QR scanner (must have Expo App downloaded) {"\n"}
-            </Text>
-
-            <Text style={styles.headerText}>
-                Author
-            </Text>
-
-            <View style={{ flexDirection: 'row', flexWrap: "wrap" }}>
-                <Text style={styles.boldText}>
-                    Jonathan Hirshowitz
-                </Text>
-                <Text style={styles.slantedText}>
-                    - Full-Stack Software Developer -
-                </Text>
-                <Text style={styles.linkText}
-                    onPress={() => Linking.openURL('https://jonathan-hirshowitz-portfolio.firebaseapp.com/')}>
-                    Website{'    '}
-                </Text>
-                <Text style={styles.linkText}
-                    onPress={() => Linking.openURL('https://www.linkedin.com/in/jonathan-hirshowitz/')}>
-                    LinkedIn
-                </Text>
-            </View>
+            </ScrollView>
         </View>
     )
 }
@@ -87,13 +71,14 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         fontSize: 20,
         color: '#333',
-        letterSpacing: 1
+        letterSpacing: 1,
+        textAlign: 'center',
+        textDecorationLine:'underline'
     },
     linkText: {
         color: 'blue'
     },
     boldText: {
-
         fontWeight: 'bold',
     },
     slantedText: {

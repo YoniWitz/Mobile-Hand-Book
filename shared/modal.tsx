@@ -32,7 +32,7 @@ export const MyModal: React.FC<IProps> = ({ modalVisible, setModalVisible, child
                                         name='close'
                                         size={20}
                                     />
-                                    <Text style={styles.textStyle}>Cancel</Text>
+                                    <Text style={styles.textStyle}>Return</Text>
                                 </View>
                             </TouchableHighlight>
                             {children}
@@ -52,7 +52,7 @@ export const MyModal: React.FC<IProps> = ({ modalVisible, setModalVisible, child
                         name='add'
                         size={20}
                     />
-                    <Text style={styles.textStyle}>Add {modalName}</Text>
+                    <Text style={styles.textStyle}>{modalName}</Text>
                 </View>
             </TouchableHighlight>
         </View>

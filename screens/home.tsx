@@ -30,7 +30,7 @@ export const Home: React.FC<IProps> = ({ navigation }) => {
 
     return (
         <View style={globalStyles.container}>
-            <MyModal modalVisible={modalVisible} setModalVisible={setModalVisible} modalName='Review'>
+            <MyModal modalVisible={modalVisible} setModalVisible={setModalVisible} modalName='Add Review'>
                 <ReviewForm handleFormSubmit={handleFormSubmit} />
             </MyModal>
             <FlatList numColumns={1}
