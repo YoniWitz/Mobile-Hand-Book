@@ -11,7 +11,7 @@ const AppDrawerNavigator = createDrawerNavigator({
     Home: {
         screen: HomeStack,
     },
-    About: {
+    'About CCNY': {
         screen: AboutStack,
     }
 })

@@ -16,6 +16,7 @@ const reviewSchema = yup.object({
 interface IProps {
     handleFormSubmit: (review: IReview) => void
 }
+
 export const ReviewForm: React.FC<IProps> = ({ handleFormSubmit }) => {
     return (
         <View style={globalStyles.container}>
