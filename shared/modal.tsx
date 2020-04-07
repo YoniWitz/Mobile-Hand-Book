@@ -35,7 +35,6 @@ export const MyModal: React.FC<IProps> = ({ modalVisible, setModalVisible, child
                                     <Text style={styles.textStyle}>Cancel</Text>
                                 </View>
                             </TouchableHighlight>
-                            <Text style={styles.modalText}>Please fill out all fields</Text>
                             {children}
                         </View>
                     </View>
@@ -84,7 +83,7 @@ const styles = StyleSheet.create({
         elevation: 5
     },
     openButton: {
-        backgroundColor: "#F194FF",
+        backgroundColor: "orange",
         borderRadius: 20,
         padding: 10,
         elevation: 2

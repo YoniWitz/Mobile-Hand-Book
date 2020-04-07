@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, TextInput, Button, Text } from 'react-native';
+import { View, TextInput, Button, Text, StyleSheet } from 'react-native';
 import { Formik } from 'formik';
 import * as yup from 'yup';
 import { globalStyles } from '../styles/global';
@@ -19,6 +19,7 @@ interface IProps {
 export const ReviewForm: React.FC<IProps> = ({ handleFormSubmit }) => {
     return (
         <View style={globalStyles.container}>
+            <Text style={styles.modalText}>Please fill out all fields</Text>
             <Formik
                 initialValues={{ title: '', body: '', rating: '', key: '' }}
                 validationSchema={reviewSchema}
@@ -61,3 +62,9 @@ export const ReviewForm: React.FC<IProps> = ({ handleFormSubmit }) => {
             </Formik>
         </View>)
 }
+const styles = StyleSheet.create({
+    modalText: {
+          marginBottom: 15,
+          textAlign: "center"
+      }
+  })

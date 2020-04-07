@@ -16,7 +16,7 @@ export const Header: React.FC<IProps> = ({ navigation, title }) => {
                 size={28}
                 onPress={pressHandler} />
             <View style={styles.title}>
-                <Image source={require('../assets/icons/heart_logo.png')} style={styles.image} />
+                <Image source={require('../assets/icons/CCNY-logo.png')} style={styles.image} />
                 <Text style={styles.headerText}>{title}</Text>
             </View>
         </ImageBackground>

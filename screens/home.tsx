@@ -48,6 +48,3 @@ export const Home: React.FC<IProps> = ({ navigation }) => {
     )
 }
 
-const styles = StyleSheet.create({
-
-})
