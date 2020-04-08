@@ -20,11 +20,11 @@ export const Home: React.FC<IProps> = ({ navigation }) => {
                 data={content}
                 renderItem={({ item, index }) => (
                     <View>
-                        <TouchableOpacity >
-                            <Card>
+                        <Card>
+                            <TouchableOpacity >
                                 <Text onPress={() => navigation.navigate('Pdf', item)}>{item.title}</Text>
-                            </Card>
-                        </TouchableOpacity>
+                            </TouchableOpacity>
+                        </Card>
                         <FlatList numColumns={1}
                             data={item.subContent}
                             keyExtractor={(item, index) => '' + index}
