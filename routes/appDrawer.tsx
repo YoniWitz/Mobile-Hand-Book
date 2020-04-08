@@ -8,7 +8,7 @@ const AppDrawerNavigator = createDrawerNavigator({
     Magazine: {
         screen: magazineStack
     },
-    Home: {
+    'EHandBook Magazine': {
         screen: HomeStack,
     },
     'About CCNY': {
