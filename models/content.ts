@@ -30,7 +30,7 @@ export const content: IContent[] = [
     },
     {
         title: 'IV. LEAVES OF ABSENCE',
-        page: 21
+        page: 21,
         subContent: [
             { title: 'A.JURY DUTY LEAVE', page: 21 },
             { title: 'B. BEREAVEMENT LEAVE', page: 21 },
