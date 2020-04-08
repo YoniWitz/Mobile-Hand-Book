@@ -10,11 +10,13 @@ export const Magazine: React.FC<IProps> = ({ navigation }) => {
     let [imageIndex, setImageIndex] = useState(0);
     let [imageWidth, setImageWidth] = useState<number>(0);
 
-    const images = [{ caption: "1. Introduction", source: require('../assets/images/2.jpg') },
-    { caption: "2. whatever1", source: require('../assets/images/3.png') },
-    { caption: "3. whatever2", source: require('../assets/images/4.jpg') },
-    { caption: "4. whatever4", source: require('../assets/images/5.jpg') },
-    { caption: "5. whatever5", source: require('../assets/images/1.jpg') }]
+    const images = [
+        { caption: "1. Introduction", source: require('../assets/images/2.jpg') },
+        { caption: "2. whatever1", source: require('../assets/images/3.png') },
+        { caption: "3. whatever2", source: require('../assets/images/4.jpg') },
+        { caption: "4. whatever4", source: require('../assets/images/5.jpg') },
+        { caption: "5. whatever5", source: require('../assets/images/1.jpg') }
+    ]
 
     let nextImage = (event: GestureResponderEvent) => {
         const X = event.nativeEvent.locationX;
@@ -48,12 +50,11 @@ export const Magazine: React.FC<IProps> = ({ navigation }) => {
                 </ImageBackground>
             </TouchableHighlight>
 
-            <Button onPress={buttonHandler} title='Download handbook' />
+            <Button title='Download handbook' onPress={buttonHandler} />
             <View style={styles.empty} />
             <View style={styles.container}>
                 <Button
-                    onPress={() => { console.log('pdfviewer'); navigation.navigate('Pdf') }}
-                    title='Open PDF'
+                    title='Open PDF' onPress={() => navigation.navigate('Pdf') }
                 />
             </View>
         </View>

@@ -1,9 +1,9 @@
 import React from 'react';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer, NavigationScreenProp, NavigationRoute } from 'react-navigation';
-import { ReviewDetails } from '../screens/reviewDetails';
 import { Header } from '../shared/header';
 import { Home } from '../screens/home';
+import { PdfScreen } from '../shared/pdfScreen';
 
 interface Params {
 
@@ -12,17 +12,16 @@ interface Params {
 const screens = {
     Home: {
         screen: Home,
-        navigationOptions: ({ navigation }: { navigation: NavigationScreenProp<NavigationRoute<Params>, Params> }) => {
-            //navigationOptions: (navigation: any) => {
+        navigationOptions: ({ navigation }: { navigation: NavigationScreenProp<NavigationRoute<Params>, Params> }) => {          
             return {
-                headerTitle: () => <Header navigation={navigation} title="Home" />
+                headerTitle: () => <Header navigation={navigation} title="EHandBook Magazine" />
             }
         }
     },
-    ReviewDetails: {
-        screen: ReviewDetails,
-        navigationOptions: {
-            title: "Review Details",
+    Pdf: {
+        screen: PdfScreen,
+        navigationOptions:{
+            title: "Employee Handbook",
         }
     }
 }
