@@ -16,6 +16,7 @@ export const Home: React.FC<IProps> = ({ navigation }) => {
         <View style={globalStyles.container}>
             <Text style={styles.textStyle}>Table of Contents (Buttons open PDF)</Text>
             <FlatList numColumns={1}
+                keyExtractor={(item, index) => '' + index}
                 data={content}
                 renderItem={({ item, index }) => (
                     <View>
@@ -26,6 +27,7 @@ export const Home: React.FC<IProps> = ({ navigation }) => {
                         </TouchableOpacity>
                         <FlatList numColumns={1}
                             data={item.subContent}
+                            keyExtractor={(item, index) => '' + index}
                             renderItem={({ item, index }) => (
                                 <View style={{ marginVertical: 1 }}>
                                     <Button title={item.title} onPress={() => navigation.navigate('Pdf', item)} />
