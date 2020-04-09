@@ -1,15 +1,15 @@
 import { createDrawerNavigator } from 'react-navigation-drawer';
 import { createAppContainer } from 'react-navigation';
 import AboutStack from './aboutStack';
-import HomeStack from './homeStack';
-import magazineStack from './magazineStack';
+import ViewMagazineStack from './viewMagazineStack';
+import DownloadMagazineStack from './downloadMagazineStack';
 
 const AppDrawerNavigator = createDrawerNavigator({  
     'EHandBook Magazine': {
-        screen: HomeStack,
+        screen: ViewMagazineStack,
     },
     'EHandBook Magazine Downloads': {
-        screen: magazineStack
+        screen: DownloadMagazineStack
     },
     'About CCNY': {
         screen: AboutStack,

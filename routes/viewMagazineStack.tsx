@@ -2,7 +2,7 @@ import React from 'react';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer, NavigationScreenProp, NavigationRoute } from 'react-navigation';
 import { Header } from '../shared/header';
-import { Home } from '../screens/home';
+import { ViewMagazine } from '../screens/viewMagazine';
 import { PdfScreen } from '../shared/pdfScreen';
 
 interface Params {
@@ -10,8 +10,8 @@ interface Params {
 }
 
 const screens = {
-    Home: {
-        screen: Home,
+    ViewMagazine: {
+        screen: ViewMagazine,
         navigationOptions: ({ navigation }: { navigation: NavigationScreenProp<NavigationRoute<Params>, Params> }) => {          
             return {
                 headerTitle: () => <Header navigation={navigation} title="EHandBook Magazine" />
@@ -26,10 +26,10 @@ const screens = {
     }
 }
 
-const HomeStack = createStackNavigator(screens, {
+const ViewMagazineStack = createStackNavigator(screens, {
     defaultNavigationOptions: {
         headerStyle: { backgroundColor: '#bbb', height: 60 }
     }
 })
 
-export default createAppContainer(HomeStack);
+export default createAppContainer(ViewMagazineStack);

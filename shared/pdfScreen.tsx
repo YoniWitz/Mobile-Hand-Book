@@ -8,7 +8,7 @@ interface IProps {
 }
 
 export const PdfScreen: React.FC<IProps> = ({ navigation }) => {
-    const source = { uri: 'bundle-assets://pdf/myPdf.pdf', cache: true };
+    const source = { uri: 'bundle-assets://pdf/myPdf.pdf', cache: false };
 
     return (
         <View style={styles.container}>
