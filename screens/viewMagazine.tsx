@@ -9,9 +9,7 @@ interface IProps {
     navigation: NavigationScreenProp<NavigationRoute<null>>
 }
 
-export const Home: React.FC<IProps> = ({ navigation }) => {
-
-
+export const ViewMagazine: React.FC<IProps> = ({ navigation }) => {
     return (
         <View style={globalStyles.container}>
             <Text style={styles.textStyle}>Table of Contents (Buttons open PDF)</Text>

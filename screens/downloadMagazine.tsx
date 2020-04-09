@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { StyleSheet, GestureResponderEvent, LayoutChangeEvent, View, TouchableHighlight, Text, ImageBackground, Button } from 'react-native';
 import { NavigationScreenProp, NavigationRoute } from 'react-navigation';
+import RNFS from 'react-native-fs';
 
 interface IProps {
     navigation: NavigationScreenProp<NavigationRoute<null>>
 }
 
-export const Magazine: React.FC<IProps> = ({ navigation }) => {
+export const DownloadMagazine: React.FC<IProps> = ({ navigation }) => {
     let [imageIndex, setImageIndex] = useState(0);
     let [imageWidth, setImageWidth] = useState<number>(0);
 
@@ -29,7 +30,36 @@ export const Magazine: React.FC<IProps> = ({ navigation }) => {
     }
 
     let buttonHandler = () => {
-        console.log('handbook downloaded');
+        RNFS.readDir(RNFS.DocumentDirectoryPath)
+            .then(result => {
+                console.log('GOT RESULT', result);
+
+                // stat the first file
+                return Promise.all([RNFS.stat(result[0].path), result[0].path]);
+            })
+            .then((statResult) => {
+                if (statResult[0].isFile()) {
+                    // if we have a file, read it
+                    return RNFS.readFile(statResult[1], 'utf8');
+                }
+
+                return 'no file';
+            })
+            .then((contents) => {
+                var path = RNFS.DocumentDirectoryPath + '/test.txt';
+
+                // write the file
+                RNFS.writeFile(path, contents, 'utf8')
+                    .then((success) => {
+                        console.log('FILE WRITTEN!', success);
+                    })
+                    .catch((err) => {
+                        console.log(err.message);
+                    });
+            })
+            .catch((err) => {
+                console.log(err.message, err.code);
+            });
     }
 
     let onNewLayout = (event: LayoutChangeEvent) => {
@@ -50,11 +80,11 @@ export const Magazine: React.FC<IProps> = ({ navigation }) => {
                 </ImageBackground>
             </TouchableHighlight>
 
-            <Button title='Download handbook' onPress={buttonHandler} />
+            <Button title='Download section' onPress={buttonHandler} />
             <View style={styles.empty} />
             <View style={styles.container}>
                 <Button
-                    title='Open PDF' onPress={() => navigation.navigate('Pdf') }
+                    title='Download handbook' onPress={buttonHandler}
                 />
             </View>
         </View>
