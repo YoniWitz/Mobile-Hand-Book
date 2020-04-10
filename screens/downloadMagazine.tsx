@@ -80,11 +80,17 @@ export const DownloadMagazine: React.FC<IProps> = ({ navigation }) => {
                 </ImageBackground>
             </TouchableHighlight>
 
-            <Button title='Download section' onPress={buttonHandler} />
+            <Button 
+                color="orange" 
+                title='Download section' 
+                onPress={buttonHandler} 
+            />
             <View style={styles.empty} />
             <View style={styles.container}>
                 <Button
-                    title='Download handbook' onPress={buttonHandler}
+                    color="orange"
+                    title='Download handbook'
+                    onPress={buttonHandler}
                 />
             </View>
         </View>

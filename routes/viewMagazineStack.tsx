@@ -28,7 +28,7 @@ const screens = {
 
 const ViewMagazineStack = createStackNavigator(screens, {
     defaultNavigationOptions: {
-        headerStyle: { backgroundColor: '#bbb', height: 60 }
+        headerStyle: { backgroundColor: 'yellow', height: 60 }
     }
 })
 

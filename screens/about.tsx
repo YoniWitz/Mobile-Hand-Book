@@ -1,14 +1,17 @@
 import React, {useState} from 'react';
 import { StyleSheet, View, Text, ScrollView } from 'react-native';
 import { globalStyles } from '../styles/global';
-import { MyModal } from '../shared/modal';
+import { MyModal } from '../shared/myModal';
 import { Letter } from './letter';
 
 export const About: React.FC = () => {
     const [modalVisible, setModalVisible] = useState(false);
     return (
         <View style={globalStyles.container}>
-            <MyModal modalVisible={modalVisible} setModalVisible={setModalVisible} modalName='Letter From The President &CEO'>
+            <MyModal modalVisible={modalVisible} 
+                     setModalVisible={setModalVisible} 
+                     modalName='Letter From The President &CEO'
+            >
                 <Letter />
             </MyModal>
             <ScrollView style={{flex:1}}>
@@ -76,7 +79,7 @@ const styles = StyleSheet.create({
         textDecorationLine:'underline'
     },
     linkText: {
-        color: 'blue'
+        color: 'yellow'
     },
     boldText: {
         fontWeight: 'bold',

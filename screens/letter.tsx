@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
         textDecorationLine: 'underline'
     },
     linkText: {
-        color: 'blue'
+        color: 'yellow'
     },
     boldText: {
         fontWeight: 'bold',

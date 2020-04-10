@@ -11,7 +11,7 @@ const screens = {
         screen: About,
         navigationOptions: ({ navigation }: { navigation: NavigationScreenProp<NavigationRoute<Params>, Params> }) => {          
             return {
-                headerTitle: () => <Header navigation={navigation} title="About CCNY" />
+                headerTitle: () => <Header navigation={navigation} title="About TCCNY" />
             }
         }
     }
@@ -19,7 +19,7 @@ const screens = {
 
 const AboutStack = createStackNavigator(screens, {
     defaultNavigationOptions: {
-        headerStyle: { backgroundColor: '#bbb', height: 60 }
+        headerStyle: { backgroundColor: 'yellow', height: 60 }
     }
 })
 
