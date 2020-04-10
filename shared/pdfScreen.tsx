@@ -8,12 +8,16 @@ interface IProps {
 }
 
 export const PdfScreen: React.FC<IProps> = ({ navigation }) => {
-    const source = { uri: 'bundle-assets://pdf/myPdf.pdf', cache: false };
+    const page = navigation.getParam('page');
+    const pdfUri = navigation.getParam('uri') || 'bundle-assets://pdf/handbook.pdf';
+    // const offset = navigation.getParam('offset') || 0;
+
+    const source = { uri: pdfUri, cache: true };
 
     return (
         <View style={styles.container}>
             <Pdf
-                page={7 + navigation.getParam('page')}
+                page={page}
                 source={source}
 
                 onLoadComplete={(numberOfPages, filePath) => {
