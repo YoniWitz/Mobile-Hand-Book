@@ -3,6 +3,7 @@ import { createAppContainer } from 'react-navigation';
 import AboutStack from './aboutStack';
 import ViewMagazineStack from './viewMagazineStack';
 import DownloadMagazineStack from './downloadMagazineStack';
+import ViewPoliciesStack from './viewPoliciesStack';
 import { Dimensions } from 'react-native';
 
 const AppDrawerNavigator = createDrawerNavigator(
@@ -26,13 +27,13 @@ const AppDrawerNavigator = createDrawerNavigator(
             },
         },
         NavScreen4:{
-            screen:AboutStack,
+            screen:ViewPoliciesStack,
             navigationOptions: {
                 drawerLabel: 'TCCNY Policies',
             },
         },
         NavScreen5:{
-            screen:AboutStack,
+            screen:ViewPoliciesStack,
             navigationOptions: {
                 drawerLabel: 'SharePoint',
             },
