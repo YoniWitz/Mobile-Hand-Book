@@ -22,7 +22,7 @@ export const MyModal: React.FC<IProps> = ({ modalVisible, setModalVisible, child
                     <View style={styles.centeredView}>
                         <View style={styles.modalView}>
                             <TouchableHighlight
-                                style={{ ...styles.openButton, backgroundColor: "#2196F3" }}
+                                style={{ ...styles.openButton, backgroundColor: "yellow" }}
                                 onPress={() => {
                                     setModalVisible(false);
                                 }}
@@ -72,7 +72,6 @@ const styles = StyleSheet.create({
         backgroundColor: "white",
         borderRadius: 20,
         padding: 35,
-
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
@@ -83,13 +82,13 @@ const styles = StyleSheet.create({
         elevation: 5
     },
     openButton: {
-        backgroundColor: "orange",
+        backgroundColor: "yellow",
         borderRadius: 20,
         padding: 10,
         elevation: 2
     },
     textStyle: {
-        color: "white",
+        color: "black",
         fontWeight: "bold",
         textAlign: "center"
     },

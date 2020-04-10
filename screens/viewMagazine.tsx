@@ -28,7 +28,11 @@ export const ViewMagazine: React.FC<IProps> = ({ navigation }) => {
                             keyExtractor={(item, index) => '' + index}
                             renderItem={({ item, index }) => (
                                 <View style={{ marginVertical: 1 }}>
-                                    <Button title={item.title} onPress={() => navigation.navigate('Pdf', item)} />
+                                    <Button 
+                                        color="orange" 
+                                        title={item.title} 
+                                        onPress={() => navigation.navigate('Pdf', item)} 
+                                    />
                                 </View>
                             )}
                         />
@@ -40,10 +44,10 @@ export const ViewMagazine: React.FC<IProps> = ({ navigation }) => {
 }
 const styles = StyleSheet.create({
     textStyle: {
-        color: "white",
+        color: "black",
         fontWeight: "bold",
         textAlign: "center",
-        backgroundColor: "orange",
+        backgroundColor: "yellow",
         borderRadius: 20,
         padding: 10,
         elevation: 2
