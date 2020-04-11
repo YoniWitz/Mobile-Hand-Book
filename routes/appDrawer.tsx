@@ -5,6 +5,7 @@ import ViewMagazineStack from './viewMagazineStack';
 import DownloadMagazineStack from './downloadMagazineStack';
 import ViewPoliciesStack from './viewPoliciesStack';
 import { Dimensions } from 'react-native';
+import ADPStack from './adpStack';
 
 const AppDrawerNavigator = createDrawerNavigator(
     {
@@ -39,7 +40,7 @@ const AppDrawerNavigator = createDrawerNavigator(
             },
         },
         NavScreen6:{
-            screen:AboutStack,
+            screen:ADPStack,
             navigationOptions: {
                 drawerLabel: 'ADP',
             },
