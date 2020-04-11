@@ -5,9 +5,7 @@ import { Header } from '../shared/header';
 import { ViewMagazine } from '../screens/viewMagazine';
 import { PdfScreen } from '../shared/pdfScreen';
 
-interface Params {
-
-}
+interface Params {}
 
 const screens = {
     ViewMagazine: {

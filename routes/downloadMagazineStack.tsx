@@ -3,9 +3,9 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer, NavigationScreenProp, NavigationRoute } from 'react-navigation';
 import { Header } from '../shared/header';
 import { DownloadMagazine } from '../screens/downloadMagazine';
-interface Params {
 
-}
+interface Params {}
+
 const screens = {
     DownloadMagazine: {
         screen: DownloadMagazine,

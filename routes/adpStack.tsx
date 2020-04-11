@@ -2,25 +2,21 @@ import React from 'react';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer, NavigationScreenProp, NavigationRoute } from 'react-navigation';
 import { Header } from '../shared/header';
-import { About } from '../screens/about';
+import { ADP } from '../screens/adp';
 
 interface Params {}
 
 const screens = {
-    About: {
-        screen: About,
+    ADP: {
+        screen: ADP,
         navigationOptions: ({ navigation }: { navigation: NavigationScreenProp<NavigationRoute<Params>, Params> }) => {          
             return {
-                headerTitle: () => <Header navigation={navigation} title="About TCCNY" />
+                headerTitle: () => <Header navigation={navigation} title="ADP" />
             }
         }
     }
 }
 
-const AboutStack = createStackNavigator(screens, {
-    defaultNavigationOptions: {
-        headerStyle: { backgroundColor: 'yellow', height: 60 }
-    }
-})
+const ADPStack = createStackNavigator(screens);
 
-export default createAppContainer(AboutStack);
+export default createAppContainer(ADPStack);

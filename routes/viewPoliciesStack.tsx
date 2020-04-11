@@ -5,9 +5,7 @@ import { Header } from '../shared/header';
 import { ViewPolicies } from '../screens/viewPolicies';
 import { PdfScreen } from '../shared/pdfScreen';
 
-interface Params {
-
-}
+interface Params {}
 
 const screens = {
     ViewPolicies: {
