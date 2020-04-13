@@ -27,20 +27,20 @@ const AppDrawerNavigator = createDrawerNavigator(
                 drawerLabel: 'About TCCNY',
             },
         },
-        NavScreen4:{
-            screen:ViewPoliciesStack,
+        NavScreen4: {
+            screen: ViewPoliciesStack,
             navigationOptions: {
                 drawerLabel: 'TCCNY Policies',
             },
         },
-        NavScreen5:{
-            screen:ViewPoliciesStack,
+        NavScreen5: {
+            screen: ADPStack,
             navigationOptions: {
                 drawerLabel: 'SharePoint',
             },
         },
-        NavScreen6:{
-            screen:ADPStack,
+        NavScreen6: {
+            screen: ADPStack,
             navigationOptions: {
                 drawerLabel: 'ADP',
             },
@@ -48,7 +48,7 @@ const AppDrawerNavigator = createDrawerNavigator(
     },
     {
         drawerWidth: Dimensions.get('window').width - 2000,
-         drawerBackgroundColor: 'orange',
+        drawerBackgroundColor: 'orange',
         contentOptions: {
             activeTintColor: 'yellow',
             inactiveTintColor: 'white',

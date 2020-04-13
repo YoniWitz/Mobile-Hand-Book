@@ -17,6 +17,9 @@ const screens = {
     }
 }
 
-const ADPStack = createStackNavigator(screens);
-
+const ADPStack = createStackNavigator(screens, {
+    defaultNavigationOptions: {
+        headerStyle: { backgroundColor: 'yellow', height: 60 }
+    }
+})
 export default createAppContainer(ADPStack);
