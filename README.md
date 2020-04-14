@@ -1,6 +1,6 @@
 # EHandBook
 
-Mobile App - Lets user view and dowload documents on their mobile phone.  
+Mobile App - Lets user view and dowload PDF documents on their mobile phone.  
 
 ## You can find it [here]
 
