@@ -4,14 +4,14 @@ import { createAppContainer, NavigationScreenProp, NavigationRoute } from 'react
 import { Header } from '../shared/header';
 import { DownloadMagazine } from '../screens/downloadMagazine';
 
-interface Params {}
+interface Params { }
 
 const screens = {
     DownloadMagazine: {
         screen: DownloadMagazine,
-        navigationOptions: () => {            
+        navigationOptions: ({ navigation }: { navigation: NavigationScreenProp<NavigationRoute<Params>, Params> }) => {
             return {
-                headerTitle: () => <Header navigation={null} title="Magazine" />
+                headerTitle: () => <Header navigation={navigation} title="Magazine" />
             }
         }
     }

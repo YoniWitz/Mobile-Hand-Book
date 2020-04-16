@@ -20,7 +20,7 @@ export const ViewPolicies: React.FC<IProps> = ({ navigation }) => {
                     <View>
                         <Card>
                             <TouchableOpacity >
-                                <Text onPress={() => navigation.navigate('Pdf', item)}>{item.title}</Text>
+                                <Text onPress={() => navigation.navigate('PdfViewer', item)}>{item.title}</Text>
                             </TouchableOpacity>
                         </Card>
                     </View>

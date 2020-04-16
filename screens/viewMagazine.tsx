@@ -20,7 +20,7 @@ export const ViewMagazine: React.FC<IProps> = ({ navigation }) => {
                     <View>
                         <Card>
                             <TouchableOpacity >
-                                <Text onPress={() => navigation.navigate('Pdf', item)}>{item.title}</Text>
+                                <Text onPress={() => navigation.navigate('PdfViewer', item)}>{item.title}</Text>
                             </TouchableOpacity>
                         </Card>
                         <FlatList numColumns={1}
@@ -31,7 +31,7 @@ export const ViewMagazine: React.FC<IProps> = ({ navigation }) => {
                                     <Button 
                                         color="orange" 
                                         title={item.title} 
-                                        onPress={() => navigation.navigate('Pdf', item)} 
+                                        onPress={() => navigation.navigate('PdfViewer', item)} 
                                     />
                                 </View>
                             )}
