@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { StyleSheet, GestureResponderEvent, LayoutChangeEvent, View, TouchableHighlight, Text, ImageBackground, Button, PermissionsAndroid, Alert } from 'react-native';
-import { NavigationScreenProp, NavigationRoute } from 'react-navigation';
+import { StyleSheet, GestureResponderEvent, LayoutChangeEvent, View, TouchableHighlight, Text, ImageBackground, Button } from 'react-native';
 import { requestDownloadPermission } from '../shared/pdfDownload';
 
-export const DownloadMagazine: React.FC<IProps> = () => {
+export const DownloadMagazine: React.FC = () => {
     let [imageIndex, setImageIndex] = useState(0);
     let [imageWidth, setImageWidth] = useState<number>(0);
 
