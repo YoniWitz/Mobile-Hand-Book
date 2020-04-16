@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { StyleSheet, GestureResponderEvent, LayoutChangeEvent, TouchableHighlight, Text, ImageBackground } from 'react-native';
 import { IImages } from '../models/IImages';
 
-interface IProps{
-    images:IImages[]
+interface IProps {
+    images: IImages[]
 }
 
-export const CarouselView: React.FC<IProps> = ({images}) => {
+export const CarouselView: React.FC<IProps> = ({ images }) => {
     let [imageIndex, setImageIndex] = useState(0);
     let [imageWidth, setImageWidth] = useState<number>(0);
 
@@ -34,7 +34,6 @@ export const CarouselView: React.FC<IProps> = ({images}) => {
             <Text style={styles.imageCaption}>{images[imageIndex].caption}</Text>
         </ImageBackground>
     </TouchableHighlight>)
-
 }
 
 const styles = StyleSheet.create({
