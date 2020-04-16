@@ -5,12 +5,12 @@ import { Header } from '../shared/header';
 import { ViewMagazine } from '../screens/viewMagazine';
 import { PdfViewer } from '../shared/pdfViewer';
 
-interface Params {}
+interface Params { }
 
 const screens = {
     ViewMagazine: {
         screen: ViewMagazine,
-        navigationOptions: ({ navigation }: { navigation: NavigationScreenProp<NavigationRoute<Params>, Params> }) => {          
+        navigationOptions: ({ navigation }: { navigation: NavigationScreenProp<NavigationRoute<Params>, Params> }) => {
             return {
                 headerTitle: () => <Header navigation={navigation} title="EHandBook Magazine" />
             }
@@ -18,7 +18,7 @@ const screens = {
     },
     PdfViewer: {
         screen: PdfViewer,
-        navigationOptions:{
+        navigationOptions: {
             title: "Employee Handbook",
         }
     }
