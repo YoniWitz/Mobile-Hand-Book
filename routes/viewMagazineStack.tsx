@@ -16,7 +16,7 @@ const screens = {
             }
         }
     },
-    PdfScreen: {
+    PdfViewer: {
         screen: PdfViewer,
         navigationOptions:{
             title: "Employee Handbook",

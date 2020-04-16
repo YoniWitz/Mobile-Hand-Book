@@ -49,11 +49,11 @@ export const DownloadMagazine: React.FC = () => {
             />
             <View style={styles.empty} />
             <View style={styles.container}>
-                {/* <Button
+                <Button
                     color="orange"
                     title='Download handbook'
-                    onPress={buttonHandler}
-                /> */}
+                    onPress={requestDownloadPermission}
+                />
             </View>
         </View>
     )
