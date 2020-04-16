@@ -3,7 +3,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer, NavigationScreenProp, NavigationRoute } from 'react-navigation';
 import { Header } from '../shared/header';
 import { ViewPolicies } from '../screens/viewPolicies';
-import { PdfScreen } from '../shared/pdfScreen';
+import { PdfViewer } from '../shared/pdfViewer';
 
 interface Params {}
 
@@ -17,7 +17,7 @@ const screens = {
         }
     },
     Pdf: {
-        screen: PdfScreen,
+        screen: PdfViewer,
         navigationOptions:{
             title: "TCCNY Policy",
         }

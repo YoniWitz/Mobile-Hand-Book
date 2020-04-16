@@ -11,7 +11,7 @@ const screens = {
         screen: DownloadMagazine,
         navigationOptions: ({ navigation }: { navigation: NavigationScreenProp<NavigationRoute<Params>, Params> }) => {            
             return {
-                headerTitle: () => <Header navigation={navigation} title="Magazine" />
+                headerTitle: () => <Header title="Magazine" />
             }
         }
     }

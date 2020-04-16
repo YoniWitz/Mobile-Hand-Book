@@ -1,6 +1,7 @@
 import React, { useCallback } from 'react';
 import { useFocusEffect } from 'react-navigation-hooks';
 import { View, Linking } from 'react-native';
+
 interface IProps {
     navigation: any
 }

@@ -3,7 +3,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer, NavigationScreenProp, NavigationRoute } from 'react-navigation';
 import { Header } from '../shared/header';
 import { ViewMagazine } from '../screens/viewMagazine';
-import { PdfScreen } from '../shared/pdfScreen';
+import { PdfViewer } from '../shared/pdfViewer';
 
 interface Params {}
 
@@ -16,8 +16,8 @@ const screens = {
             }
         }
     },
-    Pdf: {
-        screen: PdfScreen,
+    PdfScreen: {
+        screen: PdfViewer,
         navigationOptions:{
             title: "Employee Handbook",
         }

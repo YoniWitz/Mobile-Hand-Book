@@ -7,7 +7,7 @@ interface IProps {
     navigation: NavigationScreenProp<NavigationRoute<null>>
 }
 
-export const PdfScreen: React.FC<IProps> = ({ navigation }) => {
+export const PdfViewer: React.FC<IProps> = ({ navigation }) => {
     const page = navigation.getParam('page');
     const pdfUri = navigation.getParam('uri') || 'bundle-assets://pdf/handbook.pdf';
     // const offset = navigation.getParam('offset') || 0;
