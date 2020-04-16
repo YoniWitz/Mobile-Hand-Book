@@ -1,7 +1,7 @@
 import { PermissionsAndroid, Alert } from 'react-native';
 import RNFetchBlob from 'rn-fetch-blob';
 
-export const requestDownloadPermission = async () => {
+export const requestDownloadPermission = async (pdfLocation:string) => {
     try {
         const granted = await PermissionsAndroid.request(
             PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE,
@@ -17,7 +17,7 @@ export const requestDownloadPermission = async () => {
         );
         if (granted === PermissionsAndroid.RESULTS.GRANTED) {
             console.log("You can download the pdf");
-            buttonHandler();
+            buttonHandler(pdfLocation);
         } else {
             console.log("download to extrnal permission denied");
         }
@@ -39,8 +39,8 @@ let options = {
     }
 }
 
-let buttonHandler = () => {
-    config(options).fetch('GET', "http://www.africau.edu/images/default/sample.pdf")
+let buttonHandler = (pdfLocation: string) => {
+    config(options).fetch('GET', pdfLocation)
         .then((res) => {
             Alert.alert("Success Downloaded");
         })

@@ -16,7 +16,7 @@ const screens = {
             }
         }
     },
-    Pdf: {
+    PdfViewer: {
         screen: PdfViewer,
         navigationOptions:{
             title: "TCCNY Policy",

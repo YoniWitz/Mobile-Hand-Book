@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
-import { StyleSheet, GestureResponderEvent, LayoutChangeEvent, View, TouchableHighlight, Text, ImageBackground, Button } from 'react-native';
+import React from 'react';
+import { StyleSheet, View, Button } from 'react-native';
 import { requestDownloadPermission } from '../shared/pdfDownload';
+import { CarouselView } from '../shared/carouselView';
 
 export const DownloadMagazine: React.FC = () => {
-    let [imageIndex, setImageIndex] = useState(0);
-    let [imageWidth, setImageWidth] = useState<number>(0);
-
     const images = [
         { caption: "1. Introduction", source: require('../assets/images/2.jpg') },
         { caption: "2. whatever1", source: require('../assets/images/3.png') },
@@ -14,45 +12,22 @@ export const DownloadMagazine: React.FC = () => {
         { caption: "5. whatever5", source: require('../assets/images/1.jpg') }
     ]
 
-    let nextImage = (event: GestureResponderEvent) => {
-        const X = event.nativeEvent.locationX;
-        const touchCalc = (X < imageWidth / 2) ? -1 : 1;
-        let newIndex = (imageIndex + touchCalc) % images.length;
-        if (newIndex < 0)
-            newIndex = images.length - 1;
-
-        setImageIndex(newIndex);
-    }
-
-    let onNewLayout = (event: LayoutChangeEvent) => {
-        setImageWidth(event.nativeEvent.layout.width);
-    }
-
     return (
         <View style={styles.container}>
             <View style={styles.empty} />
-            <TouchableHighlight
-                onPress={(event) => nextImage(event)}
-                style={styles.image}>
-                <ImageBackground
-                    source={images[imageIndex].source}
-                    onLayout={(event) => onNewLayout(event)}
-                    style={styles.image}>
-                    <Text style={styles.imageCaption}>{images[imageIndex].caption}</Text>
-                </ImageBackground>
-            </TouchableHighlight>
+            <CarouselView images={images} />
 
             <Button
                 color="orange"
                 title='Download section'
-                onPress={requestDownloadPermission}
+                onPress={() => requestDownloadPermission("http://www.africau.edu/images/default/sample.pdf")}
             />
             <View style={styles.empty} />
             <View style={styles.container}>
                 <Button
                     color="orange"
                     title='Download handbook'
-                    onPress={requestDownloadPermission}
+                    onPress={() => requestDownloadPermission("http://www.africau.edu/images/default/sample.pdf")}
                 />
             </View>
         </View>
