@@ -9,9 +9,9 @@ interface Params {}
 const screens = {
     DownloadMagazine: {
         screen: DownloadMagazine,
-        navigationOptions: ({ navigation }: { navigation: NavigationScreenProp<NavigationRoute<Params>, Params> }) => {            
+        navigationOptions: () => {            
             return {
-                headerTitle: () => <Header navigation={navigation} title="Magazine" />
+                headerTitle: () => <Header navigation={null} title="Magazine" />
             }
         }
     }
