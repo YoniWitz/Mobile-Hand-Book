@@ -40,11 +40,12 @@ let options = {
 }
 
 let buttonHandler = (pdfLocation: string) => {
-    config(options).fetch('GET', pdfLocation)
+    //config(options).fetch('GET', pdfLocation)
+    RNFetchBlob.fs.readFile(RNFetchBlob.fs.asset(pdfLocation), 'base64')
         .then((res) => {
             Alert.alert("Success Downloaded");
         })
         .catch((err) => {
-            console.log('fetch error', err)
+            console.log('fetch error', pdfLocation)
         })
 }
