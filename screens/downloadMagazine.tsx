@@ -20,14 +20,14 @@ export const DownloadMagazine: React.FC = () => {
             <Button
                 color="orange"
                 title='Download section'
-                onPress={() => requestDownloadPermission("http://www.africau.edu/images/default/sample.pdf")}
+                onPress={() => requestDownloadPermission("handbook.pdf")}
             />
             <View style={styles.empty} />
             <View style={styles.container}>
                 <Button
                     color="orange"
                     title='Download handbook'
-                    onPress={() => requestDownloadPermission("http://www.africau.edu/images/default/sample.pdf")}
+                    onPress={() => requestDownloadPermission("pdf/handbook.pdf")}
                 />
             </View>
         </View>
