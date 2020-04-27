@@ -3,7 +3,7 @@ import { StyleSheet, View, Text, Button, FlatList, TouchableOpacity } from 'reac
 import { NavigationScreenProp, NavigationRoute } from 'react-navigation';
 import { globalStyles } from '../styles/global';
 import { Card } from '../shared/card';
-import { content } from '../models/content';
+import { magazineContent } from '../models/magazineContent';
 
 interface IProps {
     navigation: NavigationScreenProp<NavigationRoute<null>>
@@ -15,7 +15,7 @@ export const ViewMagazine: React.FC<IProps> = ({ navigation }) => {
             <Text style={styles.textStyle}>Table of Contents (Buttons open PDF)</Text>
             <FlatList numColumns={1}
                 keyExtractor={(item, index) => '' + index}
-                data={content}
+                data={magazineContent}
                 renderItem={({ item, index }) => (
                     <View>
                         <Card>
