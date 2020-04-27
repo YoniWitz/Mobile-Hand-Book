@@ -14,44 +14,37 @@ const AppDrawerNavigator = createDrawerNavigator(
             screen: ViewMagazineStack,
             navigationOptions: {
                 drawerLabel: 'EHandBook Magazine',
-            },
+            }
         },
-        // NavScreen2: {
-        //     screen: DownloadMagazineStack,
-        //     navigationOptions: {
-        //         drawerLabel: 'EHandBook Magazine Downloads',
-        //     },
-        // },
-        
-        NavScreen4: {
+        NavScreen2: {
             screen: ViewPoliciesStack,
             navigationOptions: {
                 drawerLabel: 'TCCNY Policies',
-            },
+            }
         },
-        NavScreen7: {
+        NavScreen3: {
             screen: ViewTccnyLinksStack,
             navigationOptions: {
                 drawerLabel: 'TCCNY Links',
-            },
+            }
         },
-        NavScreen3: {
+        NavScreen4: {
             screen: AboutStack,
             navigationOptions: {
                 drawerLabel: 'About TCCNY',
-            },
+            }
         },
         NavScreen5: {
             screen: SharePointStack,
             navigationOptions: {
                 drawerLabel: 'Get SharePoint Mobile App',
-            },
+            }
         },
         NavScreen6: {
             screen: ADPStack,
             navigationOptions: {
                 drawerLabel: 'ADP',
-            },
+            }
         }
     },
     {
