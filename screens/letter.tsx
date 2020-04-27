@@ -6,9 +6,9 @@ export const Letter: React.FC = () => {
     return (
         <View style={globalStyles.container}>
             <View>
-                <Image source={require('../assets/images/CEO.png')}/>
+                <Image source={require('../assets/images/CEO.png')} />
             </View>
-            <ScrollView style={{ flex: 1 }}>           
+            <ScrollView style={{ flex: 1 }}>
                 <TouchableOpacity>
                     <Text>
                         {'    '}Allow me to extend a warm welcome on behalf of The Child Center of NY! As one of
@@ -50,7 +50,7 @@ export const Letter: React.FC = () => {
                         {"\n"}President & CEO
                     </Text>
                     <View>
-                        <Image source={require('../assets/images/CEOsignature.png')} style={styles.image}/>
+                        <Image source={require('../assets/images/CEOsignature.png')} style={styles.image} />
                     </View>
                 </TouchableOpacity>
             </ScrollView>
@@ -60,8 +60,8 @@ export const Letter: React.FC = () => {
 
 const styles = StyleSheet.create({
     image: {
-        
-        
+
+
         marginHorizontal: 10,
     },
     headerText: {

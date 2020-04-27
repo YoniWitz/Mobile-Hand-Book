@@ -1,7 +1,7 @@
 import { PermissionsAndroid, Alert } from 'react-native';
 import RNFetchBlob from 'rn-fetch-blob';
 
-export const requestDownloadPermission = async (pdfLocation:string) => {
+export const requestDownloadPermission = async (pdfLocation: string) => {
     try {
         const granted = await PermissionsAndroid.request(
             PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE,
@@ -16,7 +16,7 @@ export const requestDownloadPermission = async (pdfLocation:string) => {
             }
         );
         if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-            console.log("You can download the pdf");
+            console.log("Download Access Granted");
             buttonHandler(pdfLocation);
         } else {
             console.log("download to extrnal permission denied");
@@ -34,17 +34,17 @@ let options = {
     addAndroidDownloads: {
         useDownloadManager: true, // setting it to true will use the device's native download manager and will be shown in the notification bar.
         notification: true,
-        path: PictureDir + "/me_" + Math.floor(date.getTime() + date.getSeconds() / 2), // this is the path where your downloaded file will live in
+        path: PictureDir + "/TccnyHandbook_" + Math.floor(date.getDate()), // this is the path where your downloaded file will live in
         description: 'Downloading image.'
     }
 }
 
 let buttonHandler = (pdfLocation: string) => {
     config(options).fetch('GET', pdfLocation)
-        .then((res) => {
+        .then(() => {
             Alert.alert("Success Downloaded");
         })
         .catch((err) => {
-            console.log('fetch error', err)
+            console.log(err)
         })
 }

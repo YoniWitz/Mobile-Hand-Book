@@ -4,12 +4,12 @@ import { createAppContainer, NavigationScreenProp, NavigationRoute } from 'react
 import { Header } from '../shared/header';
 import { ViewTccnyLinks } from '../screens/viewTccnyLinks';
 
-interface Params {}
+interface Params { }
 
 const screens = {
     TccnyLinks: {
         screen: ViewTccnyLinks,
-        navigationOptions: ({ navigation }: { navigation: NavigationScreenProp<NavigationRoute<Params>, Params> }) => {          
+        navigationOptions: ({ navigation }: { navigation: NavigationScreenProp<NavigationRoute<Params>, Params> }) => {
             return {
                 headerTitle: () => <Header navigation={navigation} title="TCCNY Links" />
             }
