@@ -2,10 +2,11 @@ import { createDrawerNavigator } from 'react-navigation-drawer';
 import { createAppContainer } from 'react-navigation';
 import AboutStack from './aboutStack';
 import ViewMagazineStack from './viewMagazineStack';
-import DownloadMagazineStack from './downloadMagazineStack';
 import ViewPoliciesStack from './viewPoliciesStack';
 import { Dimensions } from 'react-native';
 import ADPStack from './adpStack';
+import SharePointStack from './sharePointStack';
+import ViewTccnyLinksStack from './viewTccnyLinksStack';
 
 const AppDrawerNavigator = createDrawerNavigator(
     {
@@ -15,10 +16,23 @@ const AppDrawerNavigator = createDrawerNavigator(
                 drawerLabel: 'EHandBook Magazine',
             },
         },
-        NavScreen2: {
-            screen: DownloadMagazineStack,
+        // NavScreen2: {
+        //     screen: DownloadMagazineStack,
+        //     navigationOptions: {
+        //         drawerLabel: 'EHandBook Magazine Downloads',
+        //     },
+        // },
+        
+        NavScreen4: {
+            screen: ViewPoliciesStack,
             navigationOptions: {
-                drawerLabel: 'EHandBook Magazine Downloads',
+                drawerLabel: 'TCCNY Policies',
+            },
+        },
+        NavScreen7: {
+            screen: ViewTccnyLinksStack,
+            navigationOptions: {
+                drawerLabel: 'TCCNY Links',
             },
         },
         NavScreen3: {
@@ -27,16 +41,10 @@ const AppDrawerNavigator = createDrawerNavigator(
                 drawerLabel: 'About TCCNY',
             },
         },
-        NavScreen4: {
-            screen: ViewPoliciesStack,
-            navigationOptions: {
-                drawerLabel: 'TCCNY Policies',
-            },
-        },
         NavScreen5: {
-            screen: ADPStack,
+            screen: SharePointStack,
             navigationOptions: {
-                drawerLabel: 'SharePoint',
+                drawerLabel: 'Get SharePoint Mobile App',
             },
         },
         NavScreen6: {

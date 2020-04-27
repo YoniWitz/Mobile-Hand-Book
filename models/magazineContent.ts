@@ -1,6 +1,6 @@
-import { IContent } from "./IContent";
+import { IMagazineContent } from "./IMagazineContent";
 
-export const content: IContent[] = [
+export const magazineContent: IMagazineContent[] = [
     {
         title: 'I. INTRODUCTION',
         page: 1,
