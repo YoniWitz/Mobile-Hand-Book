@@ -2,10 +2,10 @@ import { createDrawerNavigator } from 'react-navigation-drawer';
 import { createAppContainer } from 'react-navigation';
 import AboutStack from './aboutStack';
 import ViewMagazineStack from './viewMagazineStack';
-import DownloadMagazineStack from './downloadMagazineStack';
 import ViewPoliciesStack from './viewPoliciesStack';
 import { Dimensions } from 'react-native';
 import ADPStack from './adpStack';
+import SharePointStack from './sharePointStack';
 
 const AppDrawerNavigator = createDrawerNavigator(
     {
@@ -15,12 +15,12 @@ const AppDrawerNavigator = createDrawerNavigator(
                 drawerLabel: 'EHandBook Magazine',
             },
         },
-        NavScreen2: {
-            screen: DownloadMagazineStack,
-            navigationOptions: {
-                drawerLabel: 'EHandBook Magazine Downloads',
-            },
-        },
+        // NavScreen2: {
+        //     screen: DownloadMagazineStack,
+        //     navigationOptions: {
+        //         drawerLabel: 'EHandBook Magazine Downloads',
+        //     },
+        // },
         NavScreen3: {
             screen: AboutStack,
             navigationOptions: {
@@ -34,7 +34,7 @@ const AppDrawerNavigator = createDrawerNavigator(
             },
         },
         NavScreen5: {
-            screen: ADPStack,
+            screen: SharePointStack,
             navigationOptions: {
                 drawerLabel: 'SharePoint',
             },
