@@ -6,6 +6,7 @@ import ViewPoliciesStack from './viewPoliciesStack';
 import { Dimensions } from 'react-native';
 import ADPStack from './adpStack';
 import SharePointStack from './sharePointStack';
+import ViewTccnyLinksStack from './viewTccnyLinksStack';
 
 const AppDrawerNavigator = createDrawerNavigator(
     {
@@ -21,22 +22,29 @@ const AppDrawerNavigator = createDrawerNavigator(
         //         drawerLabel: 'EHandBook Magazine Downloads',
         //     },
         // },
-        NavScreen3: {
-            screen: AboutStack,
-            navigationOptions: {
-                drawerLabel: 'About TCCNY',
-            },
-        },
+        
         NavScreen4: {
             screen: ViewPoliciesStack,
             navigationOptions: {
                 drawerLabel: 'TCCNY Policies',
             },
         },
+        NavScreen7: {
+            screen: ViewTccnyLinksStack,
+            navigationOptions: {
+                drawerLabel: 'TCCNY Links',
+            },
+        },
+        NavScreen3: {
+            screen: AboutStack,
+            navigationOptions: {
+                drawerLabel: 'About TCCNY',
+            },
+        },
         NavScreen5: {
             screen: SharePointStack,
             navigationOptions: {
-                drawerLabel: 'SharePoint',
+                drawerLabel: 'Get SharePoint Mobile App',
             },
         },
         NavScreen6: {
