@@ -2,7 +2,7 @@
 
 Mobile App - Lets user view and download PDF documents on their mobile phone.  
 
-## You can download the app from Google Play  [here](https://play.google.com/store/apps/details?id=com.newmobilehandbook)
+## You can download the app from Google Play  [here](https://play.google.com/store/apps/details?id=com.tccny)
 
 <image src="assets/images/eHandBook.jpg">  
 
