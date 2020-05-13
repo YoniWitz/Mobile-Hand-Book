@@ -45,6 +45,7 @@ let buttonHandler = (pdfLocation: string) => {
             Alert.alert("Success Downloaded");
         })
         .catch((err) => {
-            console.log(err)
+            Alert.alert("Error Downloading");
+            console.log(err);
         })
 }
