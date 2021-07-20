@@ -15,7 +15,7 @@
     "@types/yup": "^0.26.34",
     "formik": "^2.1.4",
     "react": "16.11.0",
-    "react-native": "0.62.1",
+    "react-native": "0.62.3",
     "react-native-fs": "^2.16.6",
     "react-native-gesture-handler": "^1.6.1",
     "react-native-pdf": "^6.1.1",
